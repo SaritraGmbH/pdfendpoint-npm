@@ -33,7 +33,7 @@ jobs:
         run: npm run typecheck
 
       - name: Lint project
-        run: npm run lint
+        run: npm run lint-report
         continue-on-error: true
 
       - name: Annotate Code Linting Results

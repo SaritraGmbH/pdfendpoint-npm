@@ -22,9 +22,11 @@
 	"scripts": {
 		"typecheck": "tsc --noEmit",
 		"lint": "eslint src",
+		"lint-report": "npm run lint -- --output-file eslint_report.json --format json",
 		"prettier": "prettier -w src",
 		"prebuild": "rm -rf dist",
-		"build": "tsc"
+		"build": "tsc",
+		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {
 		"cross-fetch": "^3.1.5"
