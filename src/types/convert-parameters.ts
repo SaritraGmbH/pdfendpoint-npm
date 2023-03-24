@@ -276,6 +276,4 @@ export type CommonConvertParameters = {
 	footer_start_at?: any;
 };
 
-export type ConvertParameters = CommonConvertParameters &
-	ConvertParametersByDeliveryMode &
-	S3Configuration;
+export type ConvertParameters = CommonConvertParameters & ConvertParametersByDeliveryMode;
