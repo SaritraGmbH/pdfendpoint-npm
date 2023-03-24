@@ -1,0 +1,11 @@
+# dependencies
+node_modules
+
+# builds
+dist
+
+# logs
+npm-debug.log*
+
+# misc
+.vscode

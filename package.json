@@ -1,0 +1,42 @@
+{
+	"name": "pdfendpoint",
+	"description": "pdfendpoint service",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/e965/pdfendpoint-npm.git"
+	},
+	"author": "Dmitry <inbox@e965.ru> (https://e965.ru)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/e965/pdfendpoint-npm/issues"
+	},
+	"homepage": "https://github.com/e965/pdfendpoint-npm#readme",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"lint": "eslint src",
+		"prettier": "prettier -w src",
+		"prebuild": "rm -rf dist",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"cross-fetch": "^3.1.5"
+	},
+	"devDependencies": {
+		"@types/eslint": "^8.21.3",
+		"@typescript-eslint/eslint-plugin": "^5.56.0",
+		"@typescript-eslint/parser": "^5.56.0",
+		"eslint": "^8.36.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.8.7",
+		"typescript": "^5.0.2"
+	}
+}
