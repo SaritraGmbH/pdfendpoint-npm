@@ -42,4 +42,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           report-json: eslint_report.json
-          check-name: ESLint Report Analysis (lint-server)
+          check-name: ESLint Report Analysis
