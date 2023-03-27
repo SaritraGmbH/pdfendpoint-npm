@@ -10,12 +10,10 @@ await esbuild.build({
 	entryPoints: sourceFiles,
 	outdir: 'dist/esm',
 	format: 'esm',
-	outExtension: { '.js': '.mjs' },
 });
 
 await esbuild.build({
 	entryPoints: sourceFiles,
 	outdir: 'dist/cjs',
 	format: 'cjs',
-	outExtension: { '.js': '.cjs' },
 });
