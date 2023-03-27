@@ -3,9 +3,9 @@
 	"description": "pdfendpoint service",
 	"version": "0.0.2",
 	"type": "module",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/cjs/index.cjs",
+	"module": "dist/esm/index.mjs",
+	"types": "dist/esm/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/e965/pdfendpoint-npm.git"
@@ -24,8 +24,9 @@
 		"lint": "eslint src",
 		"lint-report": "npm run lint -- --output-file eslint_report.json --format json",
 		"prettier": "prettier -w src",
-		"prebuild": "rm -rf dist",
-		"build": "tsc",
+		"emit-declarations": "tsc",
+		"build": "node ./esbuild.mjs",
+		"postbuild": "npm run emit-declarations",
 		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {
@@ -35,9 +36,11 @@
 		"@types/eslint": "^8.21.3",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
 		"@typescript-eslint/parser": "^5.56.0",
+		"esbuild": "^0.17.14",
 		"eslint": "^8.36.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^4.2.1",
+		"glob": "^9.3.2",
 		"prettier": "^2.8.7",
 		"typescript": "^5.0.2"
 	}

@@ -33,13 +33,4 @@ jobs:
         run: npm run typecheck
 
       - name: Lint project
-        run: npm run lint-report
-        continue-on-error: true
-
-      - name: Annotate Code Linting Results
-        uses: ataylorme/eslint-annotate-action@v2
-        timeout-minutes: 1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          report-json: eslint_report.json
-          check-name: ESLint Report Analysis
+        run: npm run lint
