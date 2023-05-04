@@ -11,6 +11,10 @@
 	},
 	"author": "Dmitry <inbox@e965.ru> (https://e965.ru)",
 	"license": "MIT",
+	"keywords": [
+		"pdf",
+		"pdfendpoint"
+	],
 	"bugs": {
 		"url": "https://github.com/e965/pdfendpoint-npm/issues"
 	},
