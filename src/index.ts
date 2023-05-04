@@ -14,5 +14,6 @@ export type {
 	CommonConvertParameters,
 	ConvertParameters,
 } from './types/convert-parameters.js';
+export type { ConvertResponse } from './types/convert-response.js';
 
 export type { CreatedPdfsListParameters } from './types/created-pdfs-list-parameters.js';

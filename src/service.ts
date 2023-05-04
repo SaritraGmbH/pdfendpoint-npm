@@ -8,6 +8,7 @@ import {
 } from './constants.js';
 
 import type { ConvertParameters } from './types/convert-parameters.js';
+import type { ConvertResponse } from './types/convert-response.js';
 import type { CreatedPdfsListParameters } from './types/created-pdfs-list-parameters.js';
 
 export class PdfEndpointService {
@@ -23,7 +24,7 @@ export class PdfEndpointService {
 	/**
 	 * This is the main endpoint you will be using with pdfEndpoint. This endpoint creates the pdf end returns the result.
 	 */
-	public async convert(parameters: ConvertParameters) {
+	public async convert(parameters: ConvertParameters): Promise<ConvertResponse> {
 		const response = await fetch(PDFENDPOINT_CONVERT_URL, {
 			method: 'POST',
 			headers: this.requestHeaders,
@@ -61,7 +62,7 @@ export class PdfEndpointService {
 	 * This endpoint lists your created PDFs from the latest to the oldest created PDF.
 	 */
 	public async getCreatedPdfsList(parameters: CreatedPdfsListParameters) {
-		const urlParameters = new URLSearchParams(parameters as any);
+		const urlParameters = new URLSearchParams(parameters as Record<any, any>);
 
 		const response = await fetch(PDFENDPOINT_LIST_URL + `?${urlParameters.toString()}`, {
 			method: 'GET',
