@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-import glob from 'glob';
+import { glob } from 'glob';
 import * as esbuild from 'esbuild';
 
 await fs.rm('dist', { recursive: true, force: true });
