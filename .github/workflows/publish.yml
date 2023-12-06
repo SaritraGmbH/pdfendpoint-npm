@@ -36,6 +36,6 @@ jobs:
       - name: Publish
         uses: JS-DevTools/npm-publish@v2
         with:
-          token: ${{ secrets.NPM_TOKEN }}
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
           provenance: true
           access: public
