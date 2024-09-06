@@ -19,11 +19,11 @@ jobs:
 
     steps:
       - name: Git checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
           cache-dependency-path: package-lock.json
 
@@ -34,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Publish
-        uses: JS-DevTools/npm-publish@v2
+        uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
           provenance: true
