@@ -1,5 +1,3 @@
-import fetch, { Headers } from 'cross-fetch';
-
 import {
 	PDFENDPOINT_CONVERT_URL,
 	PDFENDPOINT_HEALTH_URL,
