@@ -7,7 +7,7 @@
 	"types": "dist/esm/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/e965/pdfendpoint-npm.git"
+		"url": "git+https://github.com/trakservices/pdfendpoint-npm.git"
 	},
 	"author": "Dmitry <inbox@e965.ru> (https://e965.ru)",
 	"license": "MIT",
@@ -16,9 +16,9 @@
 		"pdfendpoint"
 	],
 	"bugs": {
-		"url": "https://github.com/e965/pdfendpoint-npm/issues"
+		"url": "https://github.com/trakservices/pdfendpoint-npm/issues"
 	},
-	"homepage": "https://github.com/e965/pdfendpoint-npm#readme",
+	"homepage": "https://github.com/trakservices/pdfendpoint-npm#readme",
 	"files": [
 		"dist"
 	],
